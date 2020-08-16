@@ -403,13 +403,17 @@ event.on_init(function()
     global.events = {}
 end)
 
-event.on_load(function()
+-- Can't modify global in on_load so do once as in on_tick.
+local function on_tick(x)
+    log("Restoring InfinityMode events.")
     for e,t in pairs(global.events) do
         for def,_ in pairs(t) do
             conditional_event.register(def)
         end
     end
-end)
+    event.remove(defines.events.on_tick, on_tick)
+end
+event.register(defines.events.on_tick, on_tick)
 
 -- handler must be a function reference from the definitions file
 function conditional_event.register(def)
@@ -418,7 +422,7 @@ function conditional_event.register(def)
     for i,e in pairs(object[1]) do
         if not events[e] then events[e] = {} end
         if not events[e][def] then
-            events[e][def] = true
+            --events[e][def] = true
         end
         event.register(e, object[2])
     end

@@ -41,7 +41,7 @@ function titlebar.create(parent, name, data)
             titlebar_flow.add {
                 type = 'sprite-button',
                 name = prefix .. 'button_' .. buttons[i].name,
-                style = 'close_button',
+                style = 'frame_action_button',
                 tooltip = buttons[i].tooltip or nil,
                 sprite = buttons[i].sprite,
                 hovered_sprite = buttons[i].hovered_sprite or nil,

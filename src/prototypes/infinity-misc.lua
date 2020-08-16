@@ -146,8 +146,8 @@ ib_entity.energy_source = {type='void'}
 ib_entity.allowed_effects = {'consumption', 'speed', 'productivity', 'pollution'}
 ib_entity.supply_area_distance = 64
 ib_entity.module_specification = {module_slots=12}
-apply_infinity_tint(ib_entity.base_picture)
-apply_infinity_tint(ib_entity.animation)
+--apply_infinity_tint(ib_entity.base_picture)
+--apply_infinity_tint(ib_entity.animation)
 
 -- infinity lab
 local lab_entity = table.deepcopy(data.raw['lab']['lab'])

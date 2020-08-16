@@ -117,7 +117,7 @@ styles['invalid_short_number_textfield'] = {
 
 styles['close_button_active'] = {
     type = 'button_style',
-    parent = 'close_button',
+    parent = 'frame_action_button',
     default_graphical_set = {
         base = {position = {272, 169}, corner_size = 8},
         shadow = {position = {440, 24}, corner_size = 8, draw_type = 'outer'}

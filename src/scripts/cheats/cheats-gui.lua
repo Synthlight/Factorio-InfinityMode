@@ -254,7 +254,7 @@ end
 
 function cheats_gui.create(player, parent)
     local player_table = util.player_table(player)
-    local window_frame = parent.add{type='frame', name='im_cheats_window', style='dialog_frame', direction='vertical'}
+    local window_frame = parent.add{type='frame', name='im_cheats_window', style='frame', direction='vertical'}
     -- if parent.name == 'mod_gui_frame_flow' then window_frame.style = mod_gui.frame_style end
     -- window_frame.style.height=530
     window_frame.location = player_table.cheats_gui.location

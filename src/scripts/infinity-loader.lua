@@ -575,7 +575,7 @@ on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_e
         if e.player_index then
             local t = util.player_table(e.player_index)
             if t.open_gui and t.open_gui.entity == entity then
-                event.dispatch{name=defines.events.on_gui_click, element=t.open_gui.close_button, player_index=e.player_index, button=defines.mouse_button_type.left, alt=false, control=false, shift=false}
+                event.dispatch{name=defines.events.on_gui_click, element=t.open_gui.frame_action_button, player_index=e.player_index, button=defines.mouse_button_type.left, alt=false, control=false, shift=false}
             end
         end
         local entities = entity.surface.find_entities_filtered{position=entity.position}

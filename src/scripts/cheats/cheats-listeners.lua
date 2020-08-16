@@ -306,12 +306,12 @@ end)
 gui.on_click('im_cheats_titlebar_button_pin', function(e)
     local player = util.get_player(e)
     local player_table = util.player_table(player)
-    if e.element.style.name == 'close_button' then
+    if e.element.style.name == 'frame_action_button' then
         e.element.style = 'close_button_active'
         player_table.cheats_gui.docked = true
         player_table.cheats_gui.location = nil
     else
-        e.element.style = 'close_button'
+        e.element.style = 'frame_action_button'
         player_table.cheats_gui.docked = false
     end
     player_table.cheats_gui.location = {x=0, y=(44*player.display_scale)}

@@ -36,7 +36,7 @@ for lm,d in pairs(chest_data) do
     register_recipes{'infinity-chest-'..lm}
 end
 
-local base_comp_chest = data.raw['container']['compilatron-chest']
+local base_comp_chest = data.raw['container']['wooden-chest']
 
 -- create tesseract chest items
 for lm,d in pairs(tess_chest_data) do
@@ -83,7 +83,7 @@ end
 
 -- tesseract chests
 -- create the chests here to let other mods modify them. increase inventory size in data-final-fixes
-local compilatron_chest = data.raw['container']['compilatron-chest']
+local compilatron_chest = data.raw['container']['wooden-chest']
 local comp_chest_picture = table.deepcopy(compilatron_chest.picture)
 comp_chest_picture.layers[1].shift = util.by_pixel(0,-4.25)
 comp_chest_picture.layers[1].hr_version.shift = util.by_pixel(0,-4.25)

@@ -286,7 +286,7 @@ on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_e
         -- check if any players have the accumulator open
         for i,t in pairs(global.players) do
             if t.ia_gui and t.ia_gui.entity == entity then
-                event.dispatch{name=defines.events.on_gui_click, element=t.open_gui.close_button, player_index=i, button=defines.mouse_button_type.left, alt=false, control=false, shift=false}
+                event.dispatch{name=defines.events.on_gui_click, element=t.open_gui.frame_action_button, player_index=i, button=defines.mouse_button_type.left, alt=false, control=false, shift=false}
             end
         end
     end

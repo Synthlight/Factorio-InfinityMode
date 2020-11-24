@@ -66,6 +66,7 @@ local function create_loader(base_underground)
   entity.name = 'infinity-loader-loader' .. (suffix ~= '' and '-'..suffix or '')
   -- other data
   entity.type = 'loader'
+  entity.collision_box = {{-0.4, -0.9}, {0.4, 0.9}}
   entity.next_upgrade = nil
   entity.max_distance = 0
   entity.order = 'a'

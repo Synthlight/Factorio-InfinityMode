@@ -364,5 +364,13 @@ event.on_configuration_changed(function(e)
                 toggle_cheats_gui{player_index=p.index}
             end
         end
+
+        -- Re-add the gui.top button if missing.
+        for i,p in pairs(game.players) do
+            local flow = mod_gui.get_button_flow(p)
+            if not flow.im_button then
+                flow.add{type='sprite-button', name='im_button', style=mod_gui.button_style, sprite='im-logo'}
+            end
+        end
     end
 end)

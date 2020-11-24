@@ -312,7 +312,7 @@ function cheats_gui.update(player, category)
                 elseif elem.type == 'slider' then
                     elem.slider_value = cur_value
                 elseif elem.type == 'textfield' then
-                    elem.text = elem.enabled and cur_value or '---'
+                    elem.text = elem.enabled and tostring(cur_value) or '---'
                 elseif elem.type == 'drop-down' then
                     elem.selected_index = cur_value
                 end

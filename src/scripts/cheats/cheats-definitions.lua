@@ -414,9 +414,9 @@ defs.cheats = {
         }},
         misc_vanilla_recipes = {type='toggle', defaults={on=true, off=false}, functions={
             value_changed = function(force, cheat, cheat_global, new_value)
-                force.recipes['player-port'].enabled = new_value
-                force.recipes['railgun'].enabled = new_value
-                force.recipes['railgun-dart'].enabled = new_value
+                --force.recipes['player-port'].enabled = new_value
+                --force.recipes['railgun'].enabled = new_value
+                --force.recipes['railgun-dart'].enabled = new_value
             end,
             get_value = function(force, cheat, cheat_global)
                 return cheat_global.cur_value
